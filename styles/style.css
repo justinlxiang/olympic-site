@@ -161,12 +161,12 @@ nav a:hover {
 }
 
 #sports-list img {
-  width: 60px; /* Make the image bigger */
-  margin-left: 15px;
+  width: 40px; /* Make the image bigger */
+  margin-left: 14px;
 }
 
 #sports-list li {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #venues-list {
@@ -179,7 +179,7 @@ nav a:hover {
 
 #venues-list li {
   font-size: 20px; /* Slightly bigger font size for venues */
-  color: #1715a2; /* Darker color for venues */
+  color: #042d27; /* Teal color for venues */
   margin-bottom: 10px; /* Space between venue items */
   text-align: center; /* Center the text */
 }
@@ -194,7 +194,7 @@ nav a:hover {
 
 #venues-list ul li {
   font-size: 16px; /* Smaller font size for sports */
-  color: #c8195c; /* Different color for sports */
+  color: #00796b; /* Darker teal color for sports */
   list-style-type: none; /* Remove bullets */
   text-align: center; /* Center the text */
   width: 100%; /* Ensure the li takes full width */
