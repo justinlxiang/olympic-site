@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Events Coming Up</title>
+  <link rel="icon" href="images/olympic-rings.png" type="image/png" />
+  <link href="styles/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Mate:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Play:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+    <a href="index.html">Back to Home</a>
+    <a href="sports.html">Sports</a>
+    </nav>
+  <h1>Venues</h1>
+  <p>Here are the venues at the Olympics:</p>
+  
+  <ul id="venues-list">
+    <!-- Venues will be populated by JavaScript -->
+  </ul>
+
+  <!-- Embed the JSON data directly into the HTML -->
+  <script id="venues-data" type="application/json">
+    [
+        {
+            "venue": "Aquatics Centre",
+            "sports": ["Artistic Gymnastics", "Diving", "Water Polo"]
+        },
+        {
+            "venue": "Bercy Arena",
+            "sports": ["Artistic Gymnastics", "Basketball", "Trampoline"]
+        },
+        {
+          "venue": "Bordeaux Stadium",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "Champ de Mars Arena",
+          "sports": ["Judo", "Wrestling"]
+        },
+        {
+          "venue": "Château de Versailles",
+          "sports": ["Equestrian", "Modern Pentathlon"]
+        },
+        {
+          "venue": "Chateauroux Shooting Centre",
+          "sports": ["Shooting"]
+        },
+        {
+          "venue": "Eiffel Tower Stadium",
+          "sports": ["Beach Volleyball"]
+        },
+        {
+          "venue": "Elancourt Hill",
+          "sports": ["Cycling Mountain Bike"]
+        },
+        {
+          "venue": "Geoffroy-Guichard Stadium",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "Grand Palais",
+          "sports": ["Fencing", "Taekwondo"]
+        },
+        {
+          "venue": "Hôtel de Ville",
+          "sports": ["Athletics"]
+        },
+        {
+          "venue": "Invalides",
+          "sports": ["Archery", "Athletics", "Cycling Road"]
+        },
+        {
+          "venue": "La Beaujoire Stadium",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "La Concorde",
+          "sports": ["3x3 Basketball", "Breaking", "Cycling BMX Freestyle", "Skateboarding"]
+        },
+        {
+          "venue": "Le Bourget Sport Climbing Venue",
+          "sports": ["Sport Climbing"]
+        },
+        {
+          "venue": "Golf National",
+          "sports": ["Golf"]
+        },
+        {
+          "venue": "Lyon Stadium",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "Marseille Marina",
+          "sports": ["Sailing"]
+        },
+        {
+          "venue": "Marseille Stadium",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "Nice Stadium",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "North Paris Arena",
+          "sports": ["Boxing", "Modern Pentathlon"]
+        },
+        {
+          "venue": "Parc des Princes",
+          "sports": ["Football"]
+        },
+        {
+          "venue": "Paris La Defense Arena",
+          "sports": ["Swimming", "Water Polo"]
+        },
+        {
+          "venue": "Pierre Mauroy Stadium",
+          "sports": ["Basketball", "Handball"]
+        },
+        {
+          "venue": "Pont Alexandre III",
+          "sports": ["Cycling Road", "Marathon Swimming", "Triathlon"]
+        },
+        {
+          "venue": "Porte de La Chapelle Arena",
+          "sports": ["Badminton", "Rhythmic Gymnastics"]
+        },
+        {
+          "venue": "Stade Roland-Garros",
+          "sports": ["Boxing", "Tennis"]
+        },
+        {
+          "venue": "Saint-Quentin-en-Yvelines BMX Stadium",
+          "sports": ["Cycling BMX Racing"]
+        },
+        {
+          "venue": "Saint-Quentin-en-Yvelines Velodrome",
+          "sports": ["Cycling Track"]
+        },
+        {
+          "venue": "South Paris Arena",
+          "sports": ["Handball", "Table Tennis", "Volleyball", "Weightlifting"]
+        },
+        {
+          "venue": "Stade de France",
+          "sports": ["Athletics", "Rugby Sevens"]
+        },
+        {
+          "venue": "Teahupo'o, Tahiti",
+          "sports": ["Surfing"]
+        },
+        {
+          "venue": "Trocadéro",
+          "sports": ["Athletics", "Cycling Road"]
+        },
+        {
+          "venue": "Vaires-sur-Marne Nautical Stadium",
+          "sports": ["Canoe Slalom", "Canoe Sprint", "Rowing"]
+        },
+        {
+          "venue": "Yves-du-Manoir Stadium",
+          "sports": ["Hockey"]
+        }
+    ]
+    </script>
+  
+    <script>
+      function fetchVenues() {
+        try {
+          const data = JSON.parse(document.getElementById('venues-data').textContent);
+          const venuesList = document.getElementById('venues-list');
+  
+          data.forEach(venue => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<strong>${venue.venue}</strong><ul>${venue.sports.map(sport => `<li>${sport}</li>`).join('')}</ul>`;
+            venuesList.appendChild(listItem);
+          });
+        } catch (error) {
+          console.error('Error fetching venues:', error);
+        }
+      }
+  
+      fetchVenues();
+    </script>
+  </script>
+  
+</body>
+
+</html>

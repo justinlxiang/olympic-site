@@ -1,0 +1,10 @@
+[
+    {
+        "venue": "Bercy Arena",
+        "sports": ["Artistic Gymnastics", "Basketball", "Trampoline"]
+    },
+    {
+        "venue": "Another Venue",
+        "sports": ["Sport 1", "Sport 2"]
+    }
+]
