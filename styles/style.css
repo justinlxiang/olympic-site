@@ -125,3 +125,7 @@ button:hover {
   color: black; /* Black text on hover */
   border: 2px solid blue; /* Green border on hover */
 }
+
+#countdown-timer {
+  font-size: 20px; /* Bigger font size */
+}
