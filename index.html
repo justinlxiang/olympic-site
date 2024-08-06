@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Paris Summer Olympics 2024</title>
+  <link rel="icon" href="images/olympic-rings.png" type="image/png" />
+  <link href="styles/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Mate:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Play:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Paris Summer Olympics 2024</h1>
+  <img src="images/Paris-2024-Olympics-Logo.png" alt="Olympics Logo" width="300" />
+  <h2>Welcome to Paris</h2>
+  <button>Change User</button>
+
+  <p>The Summer Olympics 2024 is upon us! Witness the world's finest athletes as they gather in the enchanting city of Paris to compete for glory and gold. Experience the thrill, the passion, and the unforgettable moments that define the pinnacle of sporting excellence.</p>
+
+  <p>Here are the LIVE rankings of medals by country. </p>
+
+  <button data-ranking-type="gold">Gold</button>
+  <button data-ranking-type="silver">Silver</button>
+  <button data-ranking-type="bronze">Bronze</button>
+  <button data-ranking-type="total">Total</button>
+  
+  <ol id="medal-standings">
+    <!-- Medal standings will be populated by JavaScript -->
+  </ol>
+
+  <input type="text" id="search-box" placeholder="Search for a country" />
+  <ul id="search-results"></ul>
+
+  <p><a href="https://olympics.com/en/paris-2024/medals?utm_campaign=dp_google" target="_blank"> Full Medal Standings</a></p>
+
+  <h2>Photo Gallery</h2>
+  <div class="gallery">
+    <img src="images/gallery/photo1.jpg" alt="Photo 1" height="300" />
+    <img src="images/gallery/photo2.jpg" alt="Photo 2" height="300" />
+    <img src="images/gallery/photo3.jpg" alt="Photo 3" height="300" />
+    <img src="images/gallery/photo4.webp" alt="Photo 2" height="300" />
+    <img src="images/gallery/photo5.webp" alt="Photo 3" height="300" />
+  </div>
+  <h2>Social Media Feed</h2>
+  <!-- Embed X.com #olympics feed -->
+  <div class="social-feed" style="max-height: 800px; max-width: 600px; margin: 0 auto; overflow-y: auto;">
+    <a class="twitter-timeline" href="https://twitter.com/Olympics?ref_src=twsrc%5Etfw">Tweets by Olympics</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+
+  <script src="scripts/main.js"></script>
+  <script src="scripts/medal_standings.js"></script>
+</body>
+
+</html>
