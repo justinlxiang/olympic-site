@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Events Coming Up</title>
+  <link rel="icon" href="images/olympic-rings.png" type="image/png" />
+  <link href="styles/style.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital@0;1&family=Mate:ital@0;1&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Play:wght@400;700&family=Urbanist:ital,wght@0,100..900;1,100..900&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+    <a href="index.html">Back to Home</a>
+    <a href="sports.html">Sports</a>
+    </nav>
+  <h1>Upcoming Events</h1>
+  <p>Here are the upcoming events you should look out for at the Olympics.</p>
+  
+  <ul id="events-list">
+    <!-- Events will be populated by JavaScript -->
+  </ul>
+
+  <script>
+    async function fetchEvents() {
+      try {
+        const response = await fetch('https://api.codante.io/olympic-games/events');
+        const data = await response.json();
+        const eventsList = document.getElementById('events-list');
+
+        data.events.forEach(event => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${event.name} - ${event.date}`;
+          eventsList.appendChild(listItem);
+        });
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      }
+    }
+
+    fetchEvents();
+  </script>
+  
+</body>
+
+</html>
