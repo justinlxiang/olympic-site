@@ -1,3 +1,3 @@
 # olympic-site
 
-Small webpage for tracking olympic medal rankings and social feeds.
+Website for tracking olympic medal rankings, social feeds, venues, and list of sports.
