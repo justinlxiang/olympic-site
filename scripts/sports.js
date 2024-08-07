@@ -20,9 +20,9 @@ async function fetchDisciplines() {
             listItem.appendChild(img);
             sportsList.appendChild(listItem);
         });
-        } catch (error) {
-        console.error('Error fetching disciplines:', error);
-        }
+    } catch (error) {
+    console.error('Error fetching disciplines:', error);
     }
+}
     
-    fetchDisciplines();
+fetchDisciplines();
